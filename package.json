@@ -1,0 +1,13 @@
+{
+  "name": "@markomatic/gql-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marko Matić <mail.marko.matic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-client": "^2.4.13",
+    "apollo-link-http": "^1.5.11",
+    "graphql": "^14.1.1"
+  }
+}
