@@ -11,15 +11,8 @@ var _apolloClient = require("apollo-client");
 
 var _apolloLinkHttp = require("apollo-link-http");
 
-var _apiUrl = require("./api-url");
-
-var client;
-
-var _default = function _default() {
-  if (client) {
-    return client;
-  }
-
+var _default = function _default(_ref) {
+  var apiUrl = _ref.apiUrl;
   var defaultOptions = {
     watchQuery: {
       fetchPolicy: 'no-cache',
@@ -31,9 +24,9 @@ var _default = function _default() {
     }
   };
   var httpLink = (0, _apolloLinkHttp.createHttpLink)({
-    uri: (0, _apiUrl.getApiUrl)()
+    uri: apiUrl
   });
-  return client = new _apolloClient.ApolloClient({
+  return new _apolloClient.ApolloClient({
     link: httpLink,
     cache: new _apolloCacheInmemory.InMemoryCache(),
     defaultOptions: defaultOptions

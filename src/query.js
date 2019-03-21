@@ -1,3 +1,3 @@
-import getClient from './client';
+import { getClient } from './clients';
 
-export default (...args) => getClient().query(...args);
+export default (alias, ...args) => getClient(alias).query(...args);

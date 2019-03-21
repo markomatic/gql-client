@@ -5,14 +5,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _client = _interopRequireDefault(require("./client"));
+var _clients = require("./clients");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = function _default() {
+var _default = function _default(alias) {
   var _getClient;
 
-  return (_getClient = (0, _client.default)()).query.apply(_getClient, arguments);
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  return (_getClient = (0, _clients.getClient)(alias)).query.apply(_getClient, args);
 };
 
 exports.default = _default;

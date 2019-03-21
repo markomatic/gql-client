@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "setApiUrl", {
+Object.defineProperty(exports, "registerClient", {
   enumerable: true,
   get: function get() {
-    return _apiUrl.setApiUrl;
+    return _clients.registerClient;
   }
 });
 Object.defineProperty(exports, "query", {
@@ -22,7 +22,7 @@ Object.defineProperty(exports, "mutate", {
   }
 });
 
-var _apiUrl = require("./api-url");
+var _clients = require("./clients");
 
 var _query = _interopRequireDefault(require("./query"));
 
